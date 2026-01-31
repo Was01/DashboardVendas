@@ -10,7 +10,7 @@ except FileNotFoundError:
     st.stop()
 
 with st.container():
-    st.title('Dashbord de vendas')
+    st.title('Dashboard de vendas')
     st.subheader('Contratos fechados ao longo de maio')
     st.write('---')
 
