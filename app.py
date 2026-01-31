@@ -47,4 +47,4 @@ with st.container():
     qte_dias=st.selectbox("Selecione o período",["5Dias","10Dias","15Dias","20Dias","30Dias"])
     num_dias=int(qte_dias.replace("Dias",""))
     dados=dados[-num_dias-1:-1]
-    st.area_chart(dados,x='Data',y='Contratos')
+    st.bar_chart(dados,x='Data',y='Contratos')
