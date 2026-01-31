@@ -50,6 +50,6 @@ with st.container():
     st.subheader('Gráficos')
     st.bar_chart(dados,x='Data',y='Contratos')
     st.write('---')
-
+    
 st.subheader("Dados detalhados")
-st.dataframe(dados.tail(30))
+st.dataframe(dados.tail(num_dias))
