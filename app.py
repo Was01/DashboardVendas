@@ -14,6 +14,10 @@ with st.container():
     st.subheader('Contratos fechados ao longo de maio')
     st.write('---')
 
+qte_dias=st.selectbox("Selecione o período",["5Dias","10Dias","15Dias","20Dias","30Dias"])
+num_dias=int(qte_dias.replace("Dias",""))
+dados=dados.tail(num_dias)
+
 # Cálculos e métricas
 total_vendas = 0
 contratos_medios = 0
@@ -44,7 +48,4 @@ with st.container():
 
 with st.container():
     st.subheader('Gráficos')
-    qte_dias=st.selectbox("Selecione o período",["5Dias","10Dias","15Dias","20Dias","30Dias"])
-    num_dias=int(qte_dias.replace("Dias",""))
-    dados=dados[-num_dias-1:-1]
     st.bar_chart(dados,x='Data',y='Contratos')
